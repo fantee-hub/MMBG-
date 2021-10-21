@@ -42,40 +42,40 @@ const Photography = () => {
   return (
     <PhotoSection>
       <div className="row">
-        <img src={image1} alt="picture" />
-        <img src={image2} alt="picture" />
-        <img src={image3} alt="picture" />
-        <img src={image4} alt="picture" />
-        <img src={image5} alt="picture" />
-        <img src={image6} alt="picture" />
-        <img src={image7} alt="picture" />
-        <img src={image8} alt="picture" />
-        <img src={image9} alt="picture" />
-        <img src={image10} alt="picture" />
+        <img src={image1} alt="art" />
+        <img src={image2} alt="art" />
+        <img src={image3} alt="art" />
+        <img src={image4} alt="art" />
+        <img src={image5} alt="art" />
+        <img src={image6} alt="art" />
+        <img src={image7} alt="art" />
+        <img src={image8} alt="art" />
+        <img src={image9} alt="art" />
+        <img src={image10} alt="art" />
       </div>
       <div className="row">
-        <img src={image11} alt="picture" />
-        <img src={image12} alt="picture" />
-        <img src={image13} alt="picture" />
-        <img src={image14} alt="picture" />
-        <img src={image15} alt="picture" />
-        <img src={image16} alt="picture" />
-        <img src={image17} alt="picture" />
-        <img src={image18} alt="picture" />
-        <img src={image19} alt="picture" />
-        <img src={image20} alt="picture" />
+        <img src={image11} alt="art" />
+        <img src={image12} alt="art" />
+        <img src={image13} alt="art" />
+        <img src={image14} alt="art" />
+        <img src={image15} alt="art" />
+        <img src={image16} alt="art" />
+        <img src={image17} alt="art" />
+        <img src={image18} alt="art" />
+        <img src={image19} alt="art" />
+        <img src={image20} alt="art" />
       </div>
       <div className="row">
-        <img src={image21} alt="picture" />
-        <img src={image22} alt="picture" />
-        <img src={image23} alt="picture" />
-        <img src={image24} alt="picture" />
-        <img src={image25} alt="picture" />
-        <img src={image26} alt="picture" />
-        <img src={image27} alt="picture" />
-        <img src={image28} alt="picture" />
-        <img src={image29} alt="picture" />
-        <img src={image30} alt="picture" />
+        <img src={image21} alt="art" />
+        <img src={image22} alt="art" />
+        <img src={image23} alt="art" />
+        <img src={image24} alt="art" />
+        <img src={image25} alt="art" />
+        <img src={image26} alt="art" />
+        <img src={image27} alt="art" />
+        <img src={image28} alt="art" />
+        <img src={image29} alt="art" />
+        <img src={image30} alt="art" />
       </div>
     </PhotoSection>
   );

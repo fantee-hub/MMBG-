@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 /** image */
@@ -21,19 +21,17 @@ const About = () => {
         <h1>About</h1>
       </div>
       <section className="profile-section">
-        <img src={profile} alt="profile-image" />
+        <img src={profile} alt="profile" />
       </section>
       <div className="about-content">
         <p>
           I’m a postdoctoral scholar in the lab of{" "}
           <span>
             <a href="https://cremerlab.com">Jonas Cremer</a>
-            <Line />
           </span>{" "}
           at{" "}
           <span>
             <a href="https://stanford.edu">Stanford University</a>
-            <Line />
           </span>{" "}
           in Stanford, CA. I love anything microbial, quantitative, or wrapped
           in tortillas. I firmly believe that the future of biology relies on an
@@ -52,7 +50,6 @@ const About = () => {
             <a href="https://github.com/gchure/reproducible_research">
               template GitHub repository
             </a>
-            <Line />
           </span>{" "}
           so bench scientists can start doing open-source science without the
           organizational overhead. Eventually, I’ll write something up about my
@@ -63,7 +60,6 @@ const About = () => {
           Outside of science, I love taking{" "}
           <span>
             <a href="https://gchure.github.io/photography">photographs</a>
-            <Line />
           </span>
           , making programmatically generated art and exploring the wild lands
           of California / Rocky Mountain West. Being married to a screen writer,
@@ -101,17 +97,13 @@ const AboutSection = styled.section`
     text-decoration: none;
     color: #4b4b4b;
     font-weight: 600;
+    text-decoration-color: #4f76ba;
+    text-decoration-style: solid;
   }
+
   @media screen and (max-width: 700px) {
     width: 90%;
   }
 `;
-const Line = styled.div`
-  height: 0.1rem;
-  background: #4f76ba;
-  width: 100%;
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-`;
+
 export default About;

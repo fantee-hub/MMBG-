@@ -15,36 +15,36 @@ const Nav = () => {
 
   return (
     <>
-      <Nav_Bar>
+      <NavBar>
         <div className="brand-name">
           <Link to="/">
-            <a> Griffin Chure, PhD</a>
+            Griffin Chure, PhD
             <Line style={{ width: "0%" }} />
           </Link>
         </div>
         <div className="links">
           <Link to="/About" className="link-list">
-            <a>About</a>
-            <Line style={{ width: pathname === "/About" ? "55%" : "0%" }} />
+            About
+            <Line style={{ width: pathname === "/About" ? "50%" : "0%" }} />
           </Link>
           <Link to="/CV" className="link-list">
-            <a>CV</a>
+            CV
             <Line style={{ width: pathname === "/CV" ? "45%" : "0%" }} />
           </Link>
           <Link to="/Research" className="link-list">
-            <a>Research</a>
+            Research
             <Line style={{ width: pathname === "/Research" ? "70%" : "0%" }} />
           </Link>
           <Link to="/Teaching" className="link-list">
-            <a>Teaching</a>
+            Teaching
             <Line style={{ width: pathname === "/Teaching" ? "65%" : "0%" }} />
           </Link>
           <Link to="/Showcase" className="link-list">
-            <a>Showcase</a>
+            Showcase
             <Line style={{ width: pathname === "/Showcase" ? "70%" : "0%" }} />
           </Link>
           <Link to="/Photography" className="link-list">
-            <a>Photography</a>
+            Photography
             <Line
               style={{ width: pathname === "/Photography" ? "50%" : "0%" }}
             />
@@ -58,54 +58,58 @@ const Nav = () => {
           <div className="line-2"></div>
           <div className="line-3"></div>
         </div>
-      </Nav_Bar>
+      </NavBar>
       <MobileNav>
         <div className={`mobile-links ${toggler ? "show-links" : " "}`}>
-          <Link to="/About" onClick={closeNav}>
-            <a style={{ color: pathname === "/About" ? "#4f76ba" : "#ffffff" }}>
-              About
-            </a>
+          <Link
+            to="/About"
+            onClick={closeNav}
+            style={{ color: pathname === "/About" ? "#4f76ba" : "#ffffff" }}
+          >
+            About
           </Link>
-          <Link to="/CV" onClick={closeNav}>
-            <a style={{ color: pathname === "/CV" ? "#4f76ba" : "#ffffff" }}>
-              CV
-            </a>
+          <Link
+            to="/CV"
+            onClick={closeNav}
+            style={{ color: pathname === "/CV" ? "#4f76ba" : "#ffffff" }}
+          >
+            CV
           </Link>
-          <Link to="/Research" onClick={closeNav}>
-            <a
-              style={{
-                color: pathname === "/Research" ? "#4f76ba" : "#ffffff",
-              }}
-            >
-              Research
-            </a>
+          <Link
+            to="/Research"
+            onClick={closeNav}
+            style={{
+              color: pathname === "/Research" ? "#4f76ba" : "#ffffff",
+            }}
+          >
+            Research
           </Link>
-          <Link to="/Teaching" onClick={closeNav}>
-            <a
-              style={{
-                color: pathname === "/Teaching" ? "#4f76ba" : "#ffffff",
-              }}
-            >
-              Teaching
-            </a>
+          <Link
+            to="/Teaching"
+            onClick={closeNav}
+            style={{
+              color: pathname === "/Teaching" ? "#4f76ba" : "#ffffff",
+            }}
+          >
+            Teaching
           </Link>
-          <Link to="/Showcase" onClick={closeNav}>
-            <a
-              style={{
-                color: pathname === "/Showcase" ? "#4f76ba" : "#ffffff",
-              }}
-            >
-              Showcase
-            </a>
+          <Link
+            to="/Showcase"
+            onClick={closeNav}
+            style={{
+              color: pathname === "/Showcase" ? "#4f76ba" : "#ffffff",
+            }}
+          >
+            Showcase
           </Link>
-          <Link to="/Photography" onClick={closeNav}>
-            <a
-              style={{
-                color: pathname === "/Photography" ? "#4f76ba" : "#ffffff",
-              }}
-            >
-              Photography
-            </a>
+          <Link
+            to="/Photography"
+            onClick={closeNav}
+            style={{
+              color: pathname === "/Photography" ? "#4f76ba" : "#ffffff",
+            }}
+          >
+            Photography
           </Link>
         </div>
       </MobileNav>
@@ -113,7 +117,7 @@ const Nav = () => {
   );
 };
 
-const Nav_Bar = styled.nav`
+const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
