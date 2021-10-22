@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../footer/Footer";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import Nav from "../Nav/Nav";
 
 /** Images */
 import bugs from "../images/bugs.png";
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <div>
+      <Nav />
       <>
         <Intro>
           <p>

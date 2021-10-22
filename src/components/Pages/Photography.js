@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Nav from "../Nav/Nav";
 import styled from "styled-components";
 import image1 from "../gallery/image-1.jpg";
 import image2 from "../gallery/image-2.jpg";
@@ -40,44 +41,47 @@ const Photography = () => {
   }
 
   return (
-    <PhotoSection>
-      <div className="row">
-        <img src={image1} alt="art" />
-        <img src={image2} alt="art" />
-        <img src={image3} alt="art" />
-        <img src={image4} alt="art" />
-        <img src={image5} alt="art" />
-        <img src={image6} alt="art" />
-        <img src={image7} alt="art" />
-        <img src={image8} alt="art" />
-        <img src={image9} alt="art" />
-        <img src={image10} alt="art" />
-      </div>
-      <div className="row">
-        <img src={image11} alt="art" />
-        <img src={image12} alt="art" />
-        <img src={image13} alt="art" />
-        <img src={image14} alt="art" />
-        <img src={image15} alt="art" />
-        <img src={image16} alt="art" />
-        <img src={image17} alt="art" />
-        <img src={image18} alt="art" />
-        <img src={image19} alt="art" />
-        <img src={image20} alt="art" />
-      </div>
-      <div className="row">
-        <img src={image21} alt="art" />
-        <img src={image22} alt="art" />
-        <img src={image23} alt="art" />
-        <img src={image24} alt="art" />
-        <img src={image25} alt="art" />
-        <img src={image26} alt="art" />
-        <img src={image27} alt="art" />
-        <img src={image28} alt="art" />
-        <img src={image29} alt="art" />
-        <img src={image30} alt="art" />
-      </div>
-    </PhotoSection>
+    <>
+      <Nav />
+      <PhotoSection>
+        <div className="row">
+          <img src={image1} alt="art" />
+          <img src={image2} alt="art" />
+          <img src={image3} alt="art" />
+          <img src={image4} alt="art" />
+          <img src={image5} alt="art" />
+          <img src={image6} alt="art" />
+          <img src={image7} alt="art" />
+          <img src={image8} alt="art" />
+          <img src={image9} alt="art" />
+          <img src={image10} alt="art" />
+        </div>
+        <div className="row">
+          <img src={image11} alt="art" />
+          <img src={image12} alt="art" />
+          <img src={image13} alt="art" />
+          <img src={image14} alt="art" />
+          <img src={image15} alt="art" />
+          <img src={image16} alt="art" />
+          <img src={image17} alt="art" />
+          <img src={image18} alt="art" />
+          <img src={image19} alt="art" />
+          <img src={image20} alt="art" />
+        </div>
+        <div className="row">
+          <img src={image21} alt="art" />
+          <img src={image22} alt="art" />
+          <img src={image23} alt="art" />
+          <img src={image24} alt="art" />
+          <img src={image25} alt="art" />
+          <img src={image26} alt="art" />
+          <img src={image27} alt="art" />
+          <img src={image28} alt="art" />
+          <img src={image29} alt="art" />
+          <img src={image30} alt="art" />
+        </div>
+      </PhotoSection>
+    </>
   );
 };
 const PhotoSection = styled.div`

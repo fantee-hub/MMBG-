@@ -10,10 +10,11 @@ import Photography from "./components/Pages/Photography";
 import Research from "./components/Pages/Research";
 import Showcase from "./components/Pages/Showcase";
 import Teaching from "./components/Pages/Teaching";
+import Phd from "./components/Pages/Phd";
 /** Pages */
 
 /** Navbar */
-import Nav from "./components/Nav/Nav";
+
 /** Navbar */
 
 /** styles */
@@ -25,7 +26,6 @@ function App() {
     <>
       <Globalstyles />
       <Router>
-        <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/About" component={About} />
@@ -34,6 +34,7 @@ function App() {
           <Route path="/Research" component={Research} />
           <Route path="/Showcase" component={Showcase} />
           <Route path="/Teaching" component={Teaching} />
+          <Route path="/phd" component={Phd} />
         </Switch>
       </Router>
     </>
