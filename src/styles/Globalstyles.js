@@ -23,7 +23,7 @@ const Globalstyles = createGlobalStyle`
     
 }
     p,ul,ol{
-        text-align: justify;
+        
         margin-top:5px;
         font-size: 1rem;
         font-weight: 300; //$p-weight;

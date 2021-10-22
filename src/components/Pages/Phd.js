@@ -4,6 +4,7 @@ import bugs from "../images/bugs.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Phd = () => {
   const { pathname } = useLocation();
@@ -41,30 +42,36 @@ const Phd = () => {
       <CardSection>
         <CardContainer>
           <a href="https://gchure.github.io/phd//acknowledgements">
-            <Cards>
+            <Cards className="row-1 ">
               <div className="subheading">
                 <h3>Acknowledgements</h3>
                 <p>On the shoulders of giants </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//abstract">
-            <Cards>
+            <Cards className="row-1">
               <div className="subheading">
                 <h3>Abstract</h3>
                 <p>The scope of adaptation in transcriptional regulation </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_01">
-            <Cards>
+            <Cards className="row-1">
               <div className="subheading">
                 <h3>Chapter I: Introduction</h3>
                 <p>The ubuquity of adaptive behaviour in biological matter </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_02">
@@ -73,7 +80,9 @@ const Phd = () => {
                 <h3>Chapter II: Molecular Adaptation</h3>
                 <p>Signal processing within allosteric molecules</p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_03">
@@ -85,7 +94,9 @@ const Phd = () => {
                   phenotypes{" "}
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_04">
@@ -96,7 +107,9 @@ const Phd = () => {
                   On the physiological adaptability of a simple genetic circuit{" "}
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_05">
@@ -107,7 +120,9 @@ const Phd = () => {
                   Adaptation where it counts: surviving environmental insults.{" "}
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_06">
@@ -118,7 +133,9 @@ const Phd = () => {
                   Supplemental information and extended methods for chapter II{" "}
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_07">
@@ -129,7 +146,9 @@ const Phd = () => {
                   Supplemental information and extended methods for chapter III
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_08">
@@ -140,7 +159,9 @@ const Phd = () => {
                   Supplemental information and extended methods for chapter IV{" "}
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
           <a href="https://gchure.github.io/phd//chapter_09">
@@ -151,7 +172,9 @@ const Phd = () => {
                   Supplemental information and extended methods for chapter V{" "}
                 </p>
               </div>
-              <div className="footer">Read</div>
+              <div className="footer">
+                Read <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </Cards>
           </a>
         </CardContainer>
@@ -237,9 +260,14 @@ const CardContainer = styled.div`
   max-width: 80rem;
   margin: 0 auto;
   flex-wrap: wrap;
+  .row-1 {
+    height: 15rem;
+  }
 `;
 const Cards = styled.div`
   width: 20rem;
+  height: 20rem;
+  padding-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: -2rem;
@@ -261,12 +289,14 @@ const Cards = styled.div`
     margin-bottom: 1rem;
     margin-left: 0.9rem;
     margin-right: 0.9rem;
+    height: 17rem;
   }
   @media screen and (max-width: 336px) {
     width: 18rem;
   }
 `;
 const FooterSection = styled.div`
+  width: 90%;
   a {
     text-decoration: none;
     font-weight: 600;
