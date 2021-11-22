@@ -37,6 +37,7 @@ const Home = () => {
           <div className="btn-apply">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
+              target="_blank"
               className="apply"
             >
               Apply Now
@@ -175,6 +176,18 @@ const Home = () => {
         </div> */}
       </HeroContent>
 
+      <Goals>
+        <div className="goalHeader">
+          <h1>Goal</h1>
+        </div>
+        <div className="goal-txt">
+          <p>
+            There are two categories of projects/research that i am looking to
+            fund. One is open ended, while the other is relatively restrictive.
+          </p>
+        </div>
+      </Goals>
+
       <Humanities>
         <div className="humanity-container">
           <div className="humanity-header">
@@ -255,17 +268,6 @@ const Home = () => {
         </div>
       </Nursing>
 
-      <Goals>
-        <div className="goalHeader">
-          <h1>Goal</h1>
-        </div>
-        <div className="goal-txt">
-          <p>
-            There are two categories of projects/research that i am looking to
-            fund. One is open ended, while the other is relatively restrictive.
-          </p>
-        </div>
-      </Goals>
       <Footer />
     </div>
   );

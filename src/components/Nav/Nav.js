@@ -61,6 +61,7 @@ const Nav = () => {
 
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
+            target="_blank"
             style={navbar ? themeColor : defaultColor}
           >
             Apply
