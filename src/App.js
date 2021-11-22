@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import Faq from "./components/Pages/Faq";
 import Team from "./components/Pages/Team";
+import ScrollTop from "./components/Pages/ScrollTop";
 /** Pages */
 
 /** styles */
@@ -16,7 +17,9 @@ function App() {
   return (
     <>
       <Globalstyles />
+
       <Router>
+        <ScrollTop />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Faq" component={Faq} />
