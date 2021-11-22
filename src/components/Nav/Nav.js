@@ -58,6 +58,13 @@ const Nav = () => {
           >
             Team
           </Link>
+          <Link
+            to="/About"
+            className="link-list"
+            style={navbar ? themeColor : defaultColor}
+          >
+            About
+          </Link>
 
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
@@ -133,7 +140,7 @@ const NavBar = styled.nav`
     position: relative;
     transition: all 0.15s ease-in-out;
     span {
-      color: #39ff14;
+      color: #aaa8a8;
     }
   }
   .nav-toggler > div {

@@ -6,11 +6,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import Faq from "./components/Pages/Faq";
 import Team from "./components/Pages/Team";
+import About from "./components/Pages/About";
 import ScrollTop from "./components/Pages/ScrollTop";
 /** Pages */
 
 /** styles */
 import Globalstyles from "./styles/Globalstyles";
+
 /** styles */
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/Faq" component={Faq} />
           <Route path="/Team" component={Team} />
+          <Route path="/About" component={About} />
         </Switch>
       </Router>
     </>

@@ -165,7 +165,7 @@ const FaqHero = styled.section`
       line-height: 1.6;
     }
     span {
-      color: #39ff14;
+      color: #aaa8a8;
     }
   }
   @media screen and (max-width: 765px) {
