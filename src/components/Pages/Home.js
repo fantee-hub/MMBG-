@@ -4,9 +4,6 @@ import Footer from "../footer/Footer";
 
 import { useLocation } from "react-router-dom";
 import Nav from "../Nav/Nav";
-import image1 from "../images/problem.jpg";
-import humanities from "../images/technology.jpeg";
-import nurse from "../images/nurse.jpg";
 
 const Home = () => {
   const { pathname } = useLocation();
@@ -30,8 +27,7 @@ const Home = () => {
           </div>
           <div className="sub-header">
             <h1>
-              The <span> Mary Babatola Bifarin Grant </span> [MMBG] (Coming
-              Soon)
+              The <span> Mary Babatola Bifarin Grant </span> [MBB] (Coming Soon)
             </h1>
           </div>
           <div className="btn-apply">
@@ -57,9 +53,6 @@ const Home = () => {
         </div>
         <div className="header-content">
           <div className="header-col">
-            <img src={image1} alt="solve problem" />
-          </div>
-          <div className="header-col">
             <p>
               Olatomiwa Bifarin has started the fund up with a donation of
               $1000. As a Post-doc, who still live on a stipend, and doing so
@@ -72,11 +65,25 @@ const Home = () => {
               If you like to be a sponsor anyway, that's also fine! If you you
               are a sponsor and you would like to be involved in selecting the
               grantee, please contact me at
-              <span>mbbifaringrant@gmail.com</span>
+              <span>
+                {" "}
+                <a href="https://mbbifaringrant@gmail.com">
+                  mbbifaringrant@gmail.com
+                </a>{" "}
+              </span>
             </p>
             <p>
-              For Applicants, <span>apply now.</span> You can apply as a team or
-              an individual.
+              For Applicants,{" "}
+              <span>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  apply now.
+                </a>
+              </span>{" "}
+              You can apply as a team or an individual.
             </p>
           </div>
         </div>
@@ -85,7 +92,7 @@ const Home = () => {
       <HeroContent>
         <div className="content-1">
           <div className="content-col">
-            <p>- What and why?</p>
+            <h2>What and why?</h2>
           </div>
           <div className="content-col">
             <div className="txt">
@@ -204,9 +211,6 @@ const Home = () => {
         </div>
         <div className="humanity-content">
           <div className="content-container">
-            <div className="content-image">
-              <img src={humanities} alt="Humanity and technology track" />
-            </div>
             <div className="content-txt">
               <ul>
                 <li>
@@ -251,9 +255,6 @@ const Home = () => {
           <h1>Nursing Track</h1>
         </div>
         <div className="nursing-content">
-          <div className="nursing-image">
-            <img src={nurse} alt="nurse" />
-          </div>
           <div className="nursing-txt">
             <p>
               Since my grandma was a nurse, I would like to keep one track that
@@ -334,20 +335,22 @@ const HeroContent = styled.section`
   color: #000000;
   width: 100%;
   padding: 6rem 4rem 0 4rem;
-  h4,
-  h1 {
-    color: #000000;
-    max-width: 34rem;
+  h2 {
+    color: #2b2b2b;
+    text-align: center;
   }
 
   .content-1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     .content-col {
       padding: 1rem;
       p {
         line-height: 1.6;
-        color: #65666b;
+        color: #2b2b2b;
+      }
+      .txt {
+        max-width: 45rem;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
@@ -411,15 +414,21 @@ const SubHeader = styled.section`
     }
   }
   .header-content {
-    padding: 5rem 4rem 0 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
-    align-items: center;
-    color: #65666b;
+    padding: 2rem 4rem 0 4rem;
+
+    color: #2b2b2b;
+    .header-col {
+      max-width: 45rem;
+      text-align: center;
+      margin: 0 auto;
+    }
 
     span {
       color: #39ff14;
+      a {
+        color: #39ff14;
+        text-decoration: none;
+      }
     }
   }
   @media screen and (max-width: 765px) {
@@ -444,8 +453,11 @@ const Goals = styled.section`
     max-width: 45rem;
     margin: 0 auto;
     p {
-      color: #65666b;
+      color: #2b2b2b;
     }
+  }
+  @media screen and (max-width: 765px) {
+    padding: 3rem 1rem;
   }
 `;
 
@@ -465,24 +477,21 @@ const Humanities = styled.section`
   }
   .humanity-txt {
     p {
-      color: #65666b;
+      color: #2b2b2b;
     }
   }
   .humanity-content {
     .note {
       text-align: center;
       padding: 1rem 0;
-      color: #65666b;
+      color: #2b2b2b;
     }
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
     .content-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 1rem;
-
       .content-txt {
-        color: #65666b;
+        color: #2b2b2b;
         max-width: 45rem;
+        margin: 0 auto;
         li {
           line-height: 1.6;
         }
@@ -495,7 +504,7 @@ const Humanities = styled.section`
 `;
 const Nursing = styled.section`
   background: #f3f3f3;
-  padding: 0rem 4rem;
+  padding: 0rem 0rem 2rem 0;
   .nursing-header {
     h1 {
       color: #313131;
@@ -503,15 +512,13 @@ const Nursing = styled.section`
     }
   }
   .nursing-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
-    align-items: center;
-    padding: 3rem 0;
+    padding: 1rem 0;
     .nursing-txt {
       max-width: 45rem;
+      margin: 0 auto;
+      text-align: center;
       p {
-        color: #65666b;
+        color: #2b2b2b;
         padding-left: 0.9rem;
         line-height: 1.6;
       }

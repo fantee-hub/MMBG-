@@ -6,7 +6,7 @@ const Globalstyles = createGlobalStyle`
         padding:0;
         box-sizing:border-box;
         background:#f3f3f3;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Mulish', sans-serif;
         font-weight: 400;
         font-style: normal;
         line-height: 1;
@@ -14,7 +14,7 @@ const Globalstyles = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Mulish', sans-serif;
         color: #ffffff;
 
         &:first-child {
@@ -27,8 +27,9 @@ const Globalstyles = createGlobalStyle`
         margin-top:5px;
         font-size: 1rem;
         font-weight: 300; //$p-weight;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Mulish', sans-serif;
         line-height: 1.4;
+        
         
         
     }ol li{

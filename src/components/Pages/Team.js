@@ -113,11 +113,11 @@ const TeamSection = styled.section`
         max-width: 25rem;
         margin: 0 auto;
         h4 {
-          color: #313131;
+          color: #1f1f1f;
         }
         p,
         h5 {
-          color: #65666b;
+          color: #2b2b2b;
         }
       }
     }

@@ -195,7 +195,7 @@ const Questions = styled.section`
       .answer {
         p {
           line-height: 1.6;
-          color: #65666b;
+          color: #2b2b2b;
         }
         a {
           text-decoration: none;

@@ -40,7 +40,7 @@ const Nav = () => {
       <NavBar style={navbar ? theme : defaultTheme}>
         <div className="brand-name">
           <Link to="/" style={navbar ? themeColor : defaultColor}>
-            MM<span>BG</span>
+            M<span>BB.</span>
           </Link>
         </div>
         <div className="links">
