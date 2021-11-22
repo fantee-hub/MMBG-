@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
 
 const Nav = () => {
-  const { pathname } = useLocation();
   const [toggler, setToggler] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
   const toggleNav = () => {
     setToggler(!toggler);
   };
@@ -13,42 +13,58 @@ const Nav = () => {
     setToggler(false);
   };
 
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
+  const theme = {
+    background: "#f3f3f3",
+    color: "black",
+  };
+  const defaultTheme = {
+    background: "#121212",
+  };
+  const themeColor = {
+    color: "#65666b",
+  };
+  const defaultColor = {
+    color: "white",
+  };
+
   return (
     <>
-      <NavBar>
+      <NavBar style={navbar ? theme : defaultTheme}>
         <div className="brand-name">
-          <Link to="/">
-            Griffin Chure, PhD
-            <Line style={{ width: "0%" }} />
+          <Link to="/" style={navbar ? themeColor : defaultColor}>
+            MM<span>BG</span>
           </Link>
         </div>
         <div className="links">
-          <Link to="/About" className="link-list">
-            About
-            <Line style={{ width: pathname === "/About" ? "50%" : "0%" }} />
+          <Link
+            to="/Faq"
+            className="link-list"
+            style={navbar ? themeColor : defaultColor}
+          >
+            Faq
           </Link>
-          <Link to="/CV" className="link-list">
-            CV
-            <Line style={{ width: pathname === "/CV" ? "45%" : "0%" }} />
+          <Link
+            to="/Team"
+            className="link-list"
+            style={navbar ? themeColor : defaultColor}
+          >
+            Team
           </Link>
-          <Link to="/Research" className="link-list">
-            Research
-            <Line style={{ width: pathname === "/Research" ? "70%" : "0%" }} />
-          </Link>
-          <Link to="/Teaching" className="link-list">
-            Teaching
-            <Line style={{ width: pathname === "/Teaching" ? "65%" : "0%" }} />
-          </Link>
-          <Link to="/Showcase" className="link-list">
-            Showcase
-            <Line style={{ width: pathname === "/Showcase" ? "70%" : "0%" }} />
-          </Link>
-          <Link to="/Photography" className="link-list">
-            Photography
-            <Line
-              style={{ width: pathname === "/Photography" ? "50%" : "0%" }}
-            />
-          </Link>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
+            style={navbar ? themeColor : defaultColor}
+          >
+            Apply
+          </a>
         </div>
         <div
           className={`nav-toggler ${toggler ? "toggle" : ""}`}
@@ -61,56 +77,15 @@ const Nav = () => {
       </NavBar>
       <MobileNav>
         <div className={`mobile-links ${toggler ? "show-links" : " "}`}>
-          <Link
-            to="/About"
-            onClick={closeNav}
-            style={{ color: pathname === "/About" ? "#4f76ba" : "#ffffff" }}
-          >
-            About
+          <Link to="/Faq" onClick={closeNav}>
+            Faq
           </Link>
-          <Link
-            to="/CV"
-            onClick={closeNav}
-            style={{ color: pathname === "/CV" ? "#4f76ba" : "#ffffff" }}
-          >
-            CV
+          <Link to="/Team" onClick={closeNav}>
+            Team
           </Link>
-          <Link
-            to="/Research"
-            onClick={closeNav}
-            style={{
-              color: pathname === "/Research" ? "#4f76ba" : "#ffffff",
-            }}
-          >
-            Research
-          </Link>
-          <Link
-            to="/Teaching"
-            onClick={closeNav}
-            style={{
-              color: pathname === "/Teaching" ? "#4f76ba" : "#ffffff",
-            }}
-          >
-            Teaching
-          </Link>
-          <Link
-            to="/Showcase"
-            onClick={closeNav}
-            style={{
-              color: pathname === "/Showcase" ? "#4f76ba" : "#ffffff",
-            }}
-          >
-            Showcase
-          </Link>
-          <Link
-            to="/Photography"
-            onClick={closeNav}
-            style={{
-              color: pathname === "/Photography" ? "#4f76ba" : "#ffffff",
-            }}
-          >
-            Photography
-          </Link>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link">
+            Apply
+          </a>
         </div>
       </MobileNav>
     </>
@@ -121,40 +96,48 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8rem;
-  max-width: 55rem;
+  min-height: 6rem;
+  width: 100%;
+  padding: 2rem 4rem 2rem 4rem;
   margin: 0 auto;
-  border-bottom: 1px solid #dbe8f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .links a {
     text-decoration: none;
-    font-family: "Crimson Text", serif;
-    color: #4b4b4b;
-    padding: 0 0.9rem 0 0;
+
+    color: #ffffff;
+    padding: 1rem;
     transition: all 0.15s ease-in-out;
-    font-style: italic;
+
     position: relative;
-    &:hover {
-      color: #4f76ba;
-    }
   }
   .brand-name a {
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
-    font-family: "Crimson Text", serif;
-    color: #4b4b4b;
+
+    color: #ffffff;
     padding: 0 1.2rem 0 0;
     position: relative;
     transition: all 0.15s ease-in-out;
-    &:hover {
-      color: #4f76ba;
+    span {
+      color: #39ff14;
     }
   }
   .nav-toggler > div {
     width: 2rem;
     height: 4px;
-    background: #4b4b4b;
+    background: #666666;
     margin: 0.3rem;
     border-radius: 6px;
     transition: all 0.5s ease;
@@ -165,11 +148,9 @@ const NavBar = styled.nav`
   }
   .toggle .line-1 {
     transform: translate(-7px, 8px) rotate(-45deg);
-    background: #ffffff;
   }
   .toggle .line-3 {
     transform: translate(-7px, -8px) rotate(45deg);
-    background: #ffffff;
   }
   .toggle .line-2 {
     opacity: 0;
@@ -200,13 +181,13 @@ const MobileNav = styled.div`
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(60, 60, 60, 0.9);
+    background: #121212;
     display: grid;
     grid-template-rows: repeat(6, 50px);
     align-items: center;
-    padding: 5rem 0 0 3rem;
+    padding: 8rem 0 0 3rem;
     transition: all 0.5s ease;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     z-index: 99;
     a {
       text-decoration: none;
@@ -216,25 +197,14 @@ const MobileNav = styled.div`
       padding: 0 0.9rem 0 0;
       transition: all 0.15s ease-in-out;
       font-style: italic;
-
-      &:hover {
-        color: #4b4b4b !important;
-      }
     }
   }
   .show-links {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
-`;
-
-const Line = styled.div`
-  height: 0.1rem;
-  background: #4f76ba;
-  width: 0%;
-  position: absolute;
-  bottom: -40%;
-  left: 0%;
-  transition: all 0.3s ease-out;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
 `;
 
 export default Nav;

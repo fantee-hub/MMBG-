@@ -1,90 +1,93 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faTwitter,
-  faOrcid,
-} from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const getYear = new Date().getFullYear();
 
   return (
-    <FooterSection>
-      <div className="footer-content">
-        <div className="email-part">
-          <a href="http://mailto:gchure@stanford.edu/">gchure@stanford.edu</a>
-          <p>&copy; {getYear} Griffin Chure, PhD Jekyll Themes</p>
+    <>
+      <FooterContent>
+        <div className="footer-container">
+          <div className="footer-content">
+            <div className="content-header">
+              <h4>Contact</h4>
+            </div>
+            <div className="content-items">
+              <li>
+                <a href="https://mbbifaringrant@gmail.com">
+                  mbbifaringrant@gmail.com
+                </a>
+              </li>
+              <li>&copy; {getYear} The Mary Babatola Bifarin Grant</li>
+              <li>All rights reserved.</li>
+            </div>
+          </div>
+          <div className="footer-content">
+            <div className="content-header">
+              <h4>Navigate</h4>
+            </div>
+            <div className="content-items">
+              <li>
+                <Link to="/Faq">Faq</Link>
+              </li>
+              <li>
+                <Link to="/Team">Team</Link>
+              </li>
+              <li>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link">
+                  Apply Now
+                </a>
+              </li>
+            </div>
+          </div>
+          <div className="footer-content">
+            <div className="content-header">
+              <h4>Social</h4>
+            </div>
+            <div className="content-items">
+              <FontAwesomeIcon icon={faTwitter} color="#65666b" />
+            </div>
+          </div>
         </div>
-        <div className="social-links">
-          <div>
-            <a href="http://twitter.com/gdchure">
-              <FontAwesomeIcon icon={faTwitter} size="2x" color="#ffffff" />
-            </a>
-          </div>
-          <div>
-            <a href="https://orcid.org/0000-0002-2216-2057">
-              <FontAwesomeIcon icon={faOrcid} size="2x" color="#ffffff" />
-            </a>
-          </div>
-          <div>
-            <a href="http://github.com/gchure">
-              <FontAwesomeIcon icon={faGithub} size="2x" color="#ffffff" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </FooterSection>
+      </FooterContent>
+    </>
   );
 };
 
-const FooterSection = styled.div`
-  a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #4b4b4b;
-  }
-  p {
-    color: #b6b6b6;
-  }
-  max-width: 55rem;
-  margin: 0 auto;
-  padding: 5rem 0;
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-  }
-  .social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  .social-links > div {
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    padding: 0.5rem 0;
-    margin-right: 0.3rem;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    background: #abb7b7;
-    &:hover {
-      background: #4f76ba;
+const FooterContent = styled.section`
+  background: #121212;
+  padding: 3rem 4rem;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    padding: 0.7rem;
+    .footer-content {
+      li {
+        list-style-type: none;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        color: #65666b;
+        a {
+          color: #65666b;
+        }
+      }
     }
   }
-  @media screen and (max-width: 700px) {
-    .footer-content {
+  @media screen and (max-width: 765px) {
+    padding: 3rem 1rem;
+    .footer-container {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      .footer-content {
+        margin: 0.7rem 0;
+      }
     }
-    .social-links {
-      justify-content: start;
-    }
-  }
-  @media screen and (max-width: 700px) {
-    width: 90%;
   }
 `;
 
