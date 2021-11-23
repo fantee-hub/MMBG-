@@ -86,7 +86,7 @@ const Nav = () => {
       <MobileNav>
         <div className={`mobile-links ${toggler ? "show-links" : " "}`}>
           <Link to="/Faq" onClick={closeNav}>
-            Faq
+            FAQ
           </Link>
           <Link to="/Team" onClick={closeNav}>
             Team
