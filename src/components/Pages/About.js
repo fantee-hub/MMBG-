@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import beef from "../images/alayonimi_bifarin.jpeg";
+import mama from "../images/mama bifarin.jpeg";
 import Nav from "../Nav/Nav";
 import Footer from "../footer/Footer";
 
@@ -10,11 +10,11 @@ const About = () => {
       <Nav />
       <AboutSection>
         <div className="about-header">
-          <h2>About</h2>
+          <h2>About Mama</h2>
         </div>
         <div className="about-content">
           <div className="about-img">
-            <img src={beef} alt="beefweb" />
+            <img src={mama} alt="beefweb" />
           </div>
           <div className="about-text">
             <p>
@@ -54,8 +54,8 @@ const AboutSection = styled.section`
       text-align: center;
       img {
         border-radius: 50%;
-        width: 15rem;
-        height: 15rem;
+        width: 25rem;
+        height: 25rem;
         object-fit: contain;
       }
     }
@@ -66,6 +66,15 @@ const AboutSection = styled.section`
       p {
         color: #2b2b2b;
         line-height: 1.6;
+      }
+    }
+  }
+  @media screen and (max-width: 765px) {
+    .about-content {
+      .about-img {
+        img {
+          width: 100%;
+        }
       }
     }
   }

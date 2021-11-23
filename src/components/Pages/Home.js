@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 import Nav from "../Nav/Nav";
+
+import why from "../images/why.jpeg";
+import solve from "../images/solve.jpeg";
+import track from "../images/track.jpeg";
 
 const Home = () => {
   const { pathname } = useLocation();
@@ -20,14 +25,14 @@ const Home = () => {
           <div className="hr-sub-header">
             <p>
               MBB microgrant program will give at least N250,000 ($607.05) grant
-              to <span>at least</span> two teams / individuals to do something
-              impactful - that contributes positively to their communities -in
-              Nigeria.
+              to <span>at least</span> two teams / individuals in Nigeria to do
+              something impactful.
             </p>
           </div>
           <div className="sub-header">
             <h1>
-              The <span> Mary Babatola Bifarin Grant </span> [MBB] (Coming Soon)
+              The <span> Mary Babatola Bifarin Grant </span> [MBB Grant] (Coming
+              Soon)
             </h1>
           </div>
           <div className="btn-apply">
@@ -43,15 +48,46 @@ const Home = () => {
         </div>
       </HeroSection>
 
+      <HeroContent>
+        <div className="content-1">
+          <div className="content-col">
+            <div className="img-container">
+              <img src={why} alt="what and why" />
+            </div>
+          </div>
+          <div className="content-col">
+            <div className="txt">
+              <p>
+                MBB grant was started by Olatomiwa Bifarin. The grant is named
+                after his grandmother Mary Babatola Bifarin [1927-2010] who was
+                a maternity nurse from Imesi-Ile in Osun-State Nigeria. You can
+                read more about her{" "}
+                <span>
+                  {" "}
+                  <Link to="/About">here</Link>{" "}
+                </span>
+                . This personal grantmaking endeavor is an experiment to foster
+                innovative thinking amongst young people in Nigeria. To foster
+                foresights and responsibility by taking on challenging problems
+                in the society.
+              </p>
+            </div>
+          </div>
+        </div>
+      </HeroContent>
+
       <SubHeader>
         <div className="header">
           <h2>
-            Solve a problem or do something interesting that makes a (potential)
+            Do something interesting that makes a (potential)
             <br />
             impact in our community.
           </h2>
         </div>
         <div className="header-content">
+          <div className="img-container">
+            <img src={solve} alt="solve" />
+          </div>
           <div className="header-col">
             <p>
               Olatomiwa Bifarin has started the fund up with a donation of
@@ -59,56 +95,14 @@ const Home = () => {
               right in the middle of Atlanta, he wishes he can do better.
             </p>
             <p>
-              If you have read his PHD Memoir <span>essay</span> and found it
+              If you have read his PhD Memoir <span>essay</span> and found it
               useful - and if you are able to - kindly consider donating to the
               fund <span>here.</span>
-              If you like to be a sponsor anyway, that's also fine! If you you
-              are a sponsor and you would like to be involved in selecting the
-              grantee, please contact me at
-              <span>
-                {" "}
-                <a href="https://mbbifaringrant@gmail.com">
-                  mbbifaringrant@gmail.com
-                </a>{" "}
-              </span>
-            </p>
-            <p>
-              For Applicants,{" "}
-              <span>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  apply now.
-                </a>
-              </span>{" "}
-              You can apply as a team or an individual.
+              If you like to be a sponsor anyway, that's also fine!
             </p>
           </div>
         </div>
       </SubHeader>
-
-      <HeroContent>
-        <div className="content-1">
-          <div className="content-col">
-            <h2>What and why?</h2>
-          </div>
-          <div className="content-col">
-            <div className="txt">
-              <p>
-                MBB grant was started by Olatomiwa Bifarin. The grant is named
-                after his grandmother Mary Babatola Bifarin [1936-2010] who was
-                a maternity nurse from Imesi-Ile in Osun-State Nigeria. You can
-                read more about her <span>here</span>. This personal grantmaking
-                endeavor is an experiment to foster innoative thinking amongst
-                young people in Nigeria. To foster foresights and responsibility
-                by taking on challenging problems in the society.
-              </p>
-            </div>
-          </div>
-        </div>
-      </HeroContent>
 
       <Goals>
         <div className="goalHeader">
@@ -126,7 +120,7 @@ const Home = () => {
         <div className="track-container">
           <div className="track-row">
             <div className="track-header">
-              <h2>Tracks</h2>
+              <img src={track} alt="track" />
             </div>
             <div className="track-subHeader">
               <span>01</span>
@@ -174,11 +168,11 @@ const Home = () => {
           <div className="track-row">
             <div></div>
             <div className="track-subHeader">
-              <span>01</span>
+              <span>02</span>
               <h2>Nursing Track</h2>
             </div>
             <div className="track-content">
-              <span>01</span>
+              <span>02</span>
               <p>
                 Since my grandma was a nurse, I would like to keep one track
                 that is exclusive for nurses in training, and I will be only
@@ -281,7 +275,7 @@ const HeroSection = styled.section`
     padding: 2rem 0;
   }
   span {
-    color: #aaa8a8;
+    color: #ffe066;
   }
   .hr-sub-header p {
     line-height: 2;
@@ -303,14 +297,14 @@ const HeroSection = styled.section`
     padding: 1.5rem 3.5rem;
     border: none;
     background: transparent;
-    color: #f3f3f3;
-    border: 1px solid #aaa8a8;
+    color: #ffe066;
+    border: 1px solid #ffe066;
     display: block;
     transition: all 0.3s ease;
     text-decoration: none;
     &:hover {
-      background: #aaa8a8;
-      color: #ffffff;
+      background: #ffe066;
+      color: #121212;
     }
   }
   @media screen and (max-width: 765px) {
@@ -337,8 +331,14 @@ const HeroContent = styled.section`
     color: #2b2b2b;
     text-align: center;
   }
+  .content-header {
+    padding: 2rem 0;
+  }
 
   .content-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
     .content-col {
       padding: 1rem;
       p {
@@ -348,13 +348,17 @@ const HeroContent = styled.section`
       .txt {
         max-width: 45rem;
         margin: 0 auto;
-        text-align: center;
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          color: #2b2b2b;
+        }
       }
     }
   }
 
   @media screen and (max-width: 765px) {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     .content-1 {
       display: flex;
 
@@ -379,12 +383,15 @@ const SubHeader = styled.section`
     }
   }
   .header-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
     padding: 2rem 4rem 0 4rem;
 
     color: #2b2b2b;
     .header-col {
       max-width: 45rem;
-      text-align: center;
+
       margin: 0 auto;
     }
 
@@ -424,7 +431,7 @@ const Goals = styled.section`
     }
   }
   @media screen and (max-width: 765px) {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
   }
 `;
 
@@ -432,18 +439,27 @@ const Tracks = styled.section`
   padding: 3rem 2rem;
   .track-container {
     .track-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(300px, 1fr));
-      grid-gap: 1rem;
+      .track-header {
+        text-align: center;
+        img {
+          width: 60rem;
+          height: 20rem;
+          object-fit: contain;
+        }
+      }
       margin: 1rem 0;
       h2 {
         color: #313131;
+        padding: 1rem 0;
       }
 
       p,
       li {
         line-height: 1.6;
-        font-size: 0.8rem;
+        font-size: 1.1rem;
+      }
+      h5 {
+        font-weight: 600;
       }
       p,
       h5 {
@@ -464,11 +480,19 @@ const Tracks = styled.section`
     }
   }
   @media screen and (max-width: 765px) {
-    padding: 3rem 1rem;
+    padding: 0.7rem 1rem;
     .track-container {
       .track-row {
         display: flex;
         flex-direction: column;
+        .track-header {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .track-content {
+        padding: 1rem;
       }
     }
   }

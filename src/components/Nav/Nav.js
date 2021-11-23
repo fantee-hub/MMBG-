@@ -40,7 +40,7 @@ const Nav = () => {
       <NavBar style={navbar ? theme : defaultTheme}>
         <div className="brand-name">
           <Link to="/" style={navbar ? themeColor : defaultColor}>
-            M<span>BB.</span>
+            MBB<span style={{ fontWeight: "600" }}>Grant.</span>
           </Link>
         </div>
         <div className="links">
@@ -49,7 +49,7 @@ const Nav = () => {
             className="link-list"
             style={navbar ? themeColor : defaultColor}
           >
-            Faq
+            FAQ
           </Link>
           <Link
             to="/Team"
@@ -58,14 +58,6 @@ const Nav = () => {
           >
             Team
           </Link>
-          <Link
-            to="/About"
-            className="link-list"
-            style={navbar ? themeColor : defaultColor}
-          >
-            About
-          </Link>
-
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link"
             target="_blank"
@@ -74,6 +66,13 @@ const Nav = () => {
           >
             Apply
           </a>
+          <Link
+            to="/About"
+            className="link-list"
+            style={navbar ? themeColor : defaultColor}
+          >
+            About Mama
+          </Link>
         </div>
         <div
           className={`nav-toggler ${toggler ? "toggle" : ""}`}
@@ -95,6 +94,9 @@ const Nav = () => {
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSetl5HMmtOSeJCcnEwPTdlicIQuT1pfBL-2Xb6M2c3bKnv_XA/viewform?usp=sf_link">
             Apply
           </a>
+          <Link to="/About" onClick={closeNav}>
+            About Mama
+          </Link>
         </div>
       </MobileNav>
     </>
@@ -140,7 +142,7 @@ const NavBar = styled.nav`
     position: relative;
     transition: all 0.15s ease-in-out;
     span {
-      color: #aaa8a8;
+      color: #ffe066;
     }
   }
   .nav-toggler > div {
