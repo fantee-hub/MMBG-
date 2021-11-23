@@ -18,7 +18,7 @@ const Faq = () => {
       <FaqHero>
         <div className="hero">
           <div className="hero-header">
-            <h1>Faq</h1>
+            <h1>FAQ</h1>
           </div>
           <div className="hr-sub-header">
             <p>
